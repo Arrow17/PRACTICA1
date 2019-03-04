@@ -1,5 +1,5 @@
 MPLINK 5.08, LINKER
-Linker Map File - Created Mon Mar 04 17:02:57 2019
+Linker Map File - Created Mon Mar 04 17:44:08 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -27,17 +27,17 @@ Linker Map File - Created Mon Mar 04 17:02:57 2019
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   Delay1   0x000030    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
-                 MainLoop   0x000012    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
-                    Start   0x000000    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
+                   Delay1   0x000030    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
+                 MainLoop   0x000012    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
+                    Start   0x000000    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                    Start   0x000000    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
-                 MainLoop   0x000012    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
-                   Delay1   0x000030    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1.X\PRACTICA1.asm
+                    Start   0x000000    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
+                 MainLoop   0x000012    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
+                   Delay1   0x000030    program     static C:\Users\aguil\Documents\Codigos\Tareas_ayuda\Practica1\PRACTICA1\PRACTICA1.X\PRACTICA1.asm
 
 

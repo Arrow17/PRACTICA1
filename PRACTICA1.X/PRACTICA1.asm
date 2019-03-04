@@ -15,17 +15,14 @@ MOVLB 0x0F
 CLRF PORTD
 CLRF TRISD
 CLRF ANSELD,1
-;CLRF PORTD ; Limpia las salidas del puerto D
-CLRF TRISD ; Define pines de puerto D como salidas
-CLRF Aux1 ; Limpia variable  Aux1
-CLRF Aux2 ; Limpia variable Aux2
-MOVLW b'001100011' ; Configura registro OSCCON 
+
+CLRF TRISD 
+CLRF Aux1 
+CLRF Aux2 
+MOVLW b'001100011' 
 MOVWF  OSCCON
 
 MainLoop:
-;BTG PORTD,RD1 ;Toggles PORT D PIN 1 (20) invierte los valores del pin, si esta en 1 pone un 0 y viceversa
-;BTG PORTD,RD2
-
 DECFSZ PORTD,F
 call Delay1
 call Delay1  
@@ -38,7 +35,7 @@ goto MainLoop
 
     
 Delay1:
-DECFSZ Aux1,1 ;Decrementa Aux1 en 1, salta siguiente instrucción si Aux1 es 0
+DECFSZ Aux1,1 
 GOTO Delay1
 DECFSZ Aux2,1
 GOTO Delay1

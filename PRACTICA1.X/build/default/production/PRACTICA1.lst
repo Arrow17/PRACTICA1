@@ -1,4 +1,4 @@
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  1
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -42,62 +42,58 @@ Warning[203]: Found opcode in column 1. (CLRF)
 000004 6A95           00016 CLRF TRISD
 Warning[203]: Found opcode in column 1. (CLRF)
 000006 6B5E           00017 CLRF ANSELD,1
-                      00018 ;CLRF PORTD ; Limpia las salidas del puerto D
+                      00018 
 Warning[203]: Found opcode in column 1. (CLRF)
-000008 6A95           00019 CLRF TRISD ; Define pines de puerto D como salidas
+000008 6A95           00019 CLRF TRISD 
 Warning[203]: Found opcode in column 1. (CLRF)
-00000A 6A00           00020 CLRF Aux1 ; Limpia variable  Aux1
+00000A 6A00           00020 CLRF Aux1 
 Warning[203]: Found opcode in column 1. (CLRF)
-00000C 6A01           00021 CLRF Aux2 ; Limpia variable Aux2
+00000C 6A01           00021 CLRF Aux2 
 Warning[203]: Found opcode in column 1. (MOVLW)
-00000E 0E63           00022 MOVLW b'001100011' ; Configura registro OSCCON 
+00000E 0E63           00022 MOVLW b'001100011' 
 Warning[203]: Found opcode in column 1. (MOVWF)
 000010 6ED3           00023 MOVWF  OSCCON
                       00024 
 000012                00025 MainLoop:
-                      00026 ;BTG PORTD,RD1 ;Toggles PORT D PIN 1 (20) invierte los valores del pin, si esta en 1 pone un 0 y vicever
-                            sa
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  2
+Warning[203]: Found opcode in column 1. (DECFSZ)
+000012 2E83           00026 DECFSZ PORTD,F
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00027 ;BTG PORTD,RD2
-                      00028 
-Warning[203]: Found opcode in column 1. (DECFSZ)
-000012 2E83           00029 DECFSZ PORTD,F
 Warning[203]: Found opcode in column 1. (call)
-000014 EC?? F???      00030 call Delay1
+000014 EC?? F???      00027 call Delay1
 Warning[203]: Found opcode in column 1. (call)
-000018 EC?? F???      00031 call Delay1  
+000018 EC?? F???      00028 call Delay1  
 Warning[203]: Found opcode in column 1. (CALL)
-00001C EC?? F???      00032 CALL Delay1
+00001C EC?? F???      00029 CALL Delay1
 Warning[203]: Found opcode in column 1. (call)
-000020 EC?? F???      00033 call Delay1
+000020 EC?? F???      00030 call Delay1
 Warning[203]: Found opcode in column 1. (call)
-000024 EC?? F???      00034 call Delay1  
+000024 EC?? F???      00031 call Delay1  
 Warning[203]: Found opcode in column 1. (CALL)
-000028 EC?? F???      00035 CALL Delay1    
+000028 EC?? F???      00032 CALL Delay1    
 Warning[203]: Found opcode in column 1. (goto)
-00002C EF?? F???      00036 goto MainLoop   
-                      00037     
-                      00038 
-                      00039     
-000030                00040 Delay1:
+00002C EF?? F???      00033 goto MainLoop   
+                      00034     
+                      00035 
+                      00036     
+000030                00037 Delay1:
 Warning[203]: Found opcode in column 1. (DECFSZ)
-000030 2E00           00041 DECFSZ Aux1,1 ;Decrementa Aux1 en 1, salta siguiente instrucción si Aux1 es 0
+000030 2E00           00038 DECFSZ Aux1,1 
 Warning[203]: Found opcode in column 1. (GOTO)
-000032 EF?? F???      00042 GOTO Delay1
+000032 EF?? F???      00039 GOTO Delay1
 Warning[203]: Found opcode in column 1. (DECFSZ)
-000036 2E01           00043 DECFSZ Aux2,1
+000036 2E01           00040 DECFSZ Aux2,1
 Warning[203]: Found opcode in column 1. (GOTO)
-000038 EF?? F???      00044 GOTO Delay1
+000038 EF?? F???      00041 GOTO Delay1
 Warning[203]: Found opcode in column 1. (return)
-00003C 0012           00045 return
+00003C 0012           00042 return
 Warning[205]: Found directive in column 1. (end)
-                      00046 end
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  3
+                      00043 end
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  3
 
 
 SYMBOL TABLE
@@ -156,7 +152,7 @@ AHEN                              00000001
 AN0                               00000000
 AN1                               00000001
 AN2                               00000002
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  4
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  4
 
 
 SYMBOL TABLE
@@ -215,7 +211,7 @@ BRG10                             00000002
 BRG11                             00000003
 BRG12                             00000004
 BRG13                             00000005
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  5
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  5
 
 
 SYMBOL TABLE
@@ -274,7 +270,7 @@ CCH1                              00000001
 CCP1                              00000002
 CCP1ASE                           00000007
 CCP1CON                           00000FBD
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  6
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  6
 
 
 SYMBOL TABLE
@@ -333,7 +329,7 @@ COUT2                             00000006
 CPOL                              00000004
 CRC16EE                           00000002
 CRC16EF                           00000002
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  7
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  7
 
 
 SYMBOL TABLE
@@ -392,7 +388,7 @@ ECCP1AS2                          00000006
 ECCP1ASE                          00000007
 ECCP1CON                          00000FBD
 ECCP1DEL                          00000FB7
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  8
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  8
 
 
 SYMBOL TABLE
@@ -451,7 +447,7 @@ FSR1L                             00000FE1
 FSR2                              00000002
 FSR2H                             00000FDA
 FSR2L                             00000FD9
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE  9
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE  9
 
 
 SYMBOL TABLE
@@ -510,7 +506,7 @@ INTCON                            00000FF2
 INTCON2                           00000FF1
 INTCON3                           00000FF0
 INTEDG0                           00000006
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 10
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 10
 
 
 SYMBOL TABLE
@@ -569,7 +565,7 @@ LATB4                             00000004
 LATB5                             00000005
 LATB6                             00000006
 LATB7                             00000007
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 11
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 11
 
 
 SYMBOL TABLE
@@ -628,7 +624,7 @@ OSCCON                            00000FD3
 OSCCON2                           00000FD2
 OSCFIE                            00000007
 OSCFIF                            00000007
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 12
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 12
 
 
 SYMBOL TABLE
@@ -687,7 +683,7 @@ PORTE                             00000F84
 POSTDEC0                          00000FED
 POSTDEC1                          00000FE5
 POSTDEC2                          00000FDD
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 13
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 13
 
 
 SYMBOL TABLE
@@ -746,7 +742,7 @@ RC1IF                             00000005
 RC1IP                             00000005
 RC2                               00000002
 RC4                               00000004
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 14
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 14
 
 
 SYMBOL TABLE
@@ -805,7 +801,7 @@ SLRB                              00000001
 SLRC                              00000002
 SLRCON                            00000F7A
 SLRD                              00000003
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 15
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 15
 
 
 SYMBOL TABLE
@@ -864,7 +860,7 @@ SSP1ADD3                          00000003
 SSP1ADD4                          00000004
 SSP1ADD5                          00000005
 SSP1ADD6                          00000006
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 16
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 16
 
 
 SYMBOL TABLE
@@ -923,7 +919,7 @@ STMD                              00000004
 STOR                              00000001
 STR1A                             00000000
 STR1B                             00000001
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 17
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 17
 
 
 SYMBOL TABLE
@@ -982,7 +978,7 @@ T2CON                             00000FBA
 T2OUTPS0                          00000003
 T2OUTPS1                          00000004
 T2OUTPS2                          00000005
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 18
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 18
 
 
 SYMBOL TABLE
@@ -1041,7 +1037,7 @@ TMR2IP                            00000001
 TMR2MD                            00000001
 TMR2ON                            00000002
 TMR3                              00000FB2
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 19
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 19
 
 
 SYMBOL TABLE
@@ -1100,7 +1096,7 @@ TRISD2                            00000002
 TRISD3                            00000003
 TRISD4                            00000004
 TRISD5                            00000005
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 20
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 20
 
 
 SYMBOL TABLE
@@ -1159,7 +1155,7 @@ UEP2                              00000F6C
 UEP3                              00000F6D
 UEP4                              00000F6E
 UEP5                              00000F6F
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 21
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 21
 
 
 SYMBOL TABLE
@@ -1218,7 +1214,7 @@ _BOREN_NOSLP_2L                   000000FD
 _BOREN_OFF_2L                     000000F9
 _BOREN_ON_2L                      000000FB
 _BOREN_SBORDIS_2L                 000000FF
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 22
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 22
 
 
 SYMBOL TABLE
@@ -1277,7 +1273,7 @@ _EBTRB_ON_7H                      000000BF
 _FCMEN_OFF_1H                     000000BF
 _FCMEN_ON_1H                      000000FF
 _FOSC_ECHCLKO_1H                  000000F4
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 23
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 23
 
 
 SYMBOL TABLE
@@ -1336,7 +1332,7 @@ _WDTPS_16384_2H                   000000FB
 _WDTPS_16_2H                      000000D3
 _WDTPS_1_2H                       000000C3
 _WDTPS_2048_2H                    000000EF
-MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:02:55         PAGE 24
+MPASM 5.77                     PRACTICA1.ASM   3-4-2019  17:44:06         PAGE 24
 
 
 SYMBOL TABLE
